@@ -1,3 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Delfines</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    background-color: #e6f7ff;
+}
+
+header{
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+}
+
+nav{
+    margin: 20px;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav li{
+    display: inline-block;
+    margin: 10px;
+}
+
+nav a{
+    text-decoration: none;
+    background-color: #0096c7;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+section{
+    padding: 20px;
+}
+
+footer{
+    background-color: #0077b6;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+button{
+    padding: 10px;
+    margin: 10px;
+}
+
+input{
+    padding: 8px;
+}
 
 </style>
 
@@ -5,37 +67,82 @@
 <body>
 
 <header>
-    <h1>🐋 Animales Marinos 🐬</h1>
+<h1>Delfines</h1>
 </header>
-
-<section>
-
-<h2>Bienvenido</h2>
-
-<p>
-Este proyecto contiene información sobre las Ballenas Grises,
-los Delfines y las Orcas.
-</p>
-
-<img src="https://www.shutterstock.com/image-vector/watercolor-whale-shark-seahorse-dolphin-260nw-2604756849.jpg" alt="Animales Marinos">
-
-<p>
-Explora el océano y conoce más sobre estas increíbles especies marinas.
-</p>
-
-</section>
 
 <nav>
 <ul>
+<li><a href="index.html">🏠 Inicio</a></li>
 <li><a href="ballenas_grises.html">🐋 Ballenas Grises</a></li>
-<li><a href="delfines.html">🐬 Delfines</a></li>
 <li><a href="orcas.html">⚫ Orcas</a></li>
 </ul>
 </nav>
 
+<section>
+
+<h2>Información</h2>
+
+<p>
+Los delfines son animales marinos inteligentes y muy sociables.
+Pueden comunicarse mediante sonidos y movimientos.
+</p>
+
+<p>
+Habitan en océanos y mares de todo el mundo, aunque algunas especies viven en ríos.
+</p>
+
+<p>
+Se alimentan principalmente de peces y utilizan la ecolocalización para encontrar comida.
+</p>
+
+<img src="https://i0.wp.com/hotbook.mx/wp-content/uploads/2018/11/datos-curiosos-de-los-delfines-pirtada.jpg?w=1024&ssl=1" width="400">
+
+<br><br>
+
+<h3>Delfín en Movimiento</h3>
+
+<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWhybXNvaWVyZ3Y3d3owajlndGpuZDQxOWgxMTQ0b3hpNXp2cGpwMiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/XAn87DjcSipBm/200.webp" width="400">
+
+<br><br>
+
+<button onclick="cambiarColor()">
+Cambiar color de fondo
+</button>
+
+<h2>Tu opinión</h2>
+
+<p>¿Cuál es tu animal marino favorito?</p>
+
+<input type="text" id="animal">
+
+<button onclick="mostrarAnimal()">
+Enviar
+</button>
+
+<p id="resultado"></p>
+
+</section>
+
 <footer>
-<p>Proyecto HTML5 - Animales Marinos</p>
+<p>Proyecto HTML5 - Delfines</p>
 </footer>
+
+<script>
+
+function cambiarColor(){
+    document.body.style.backgroundColor = "#caf0f8";
+}
+
+function mostrarAnimal(){
+
+    let animal =
+    document.getElementById("animal").value;
+
+    document.getElementById("resultado").innerHTML =
+    "Tu animal marino favorito es: " + animal;
+}
+
+</script>
 
 </body>
 </html>
