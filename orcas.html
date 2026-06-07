@@ -3,6 +3,62 @@
 <head>
 <meta charset="UTF-8">
 <title>Orcas</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    background-color: #e6f7ff;
+}
+
+header{
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+}
+
+nav{
+    margin: 20px;
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+}
+
+nav li{
+    display: inline-block;
+    margin: 10px;
+}
+
+nav a{
+    text-decoration: none;
+    background-color: #0096c7;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+section{
+    padding: 20px;
+}
+
+footer{
+    background-color: #0077b6;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+button{
+    padding: 10px;
+    margin: 10px;
+}
+
+</style>
+
 </head>
 <body>
 
@@ -12,9 +68,9 @@
 
 <nav>
 <ul>
-<li><a href="index.html">Inicio</a></li>
-<li><a href="ballenas_grises.html">Ballenas Grises</a></li>
-<li><a href="delfines.html">Delfines</a></li>
+<li><a href="index.html">🏠 Inicio</a></li>
+<li><a href="ballenas_grises.html">🐋 Ballenas Grises</a></li>
+<li><a href="delfines.html">🐬 Delfines</a></li>
 </ul>
 </nav>
 
@@ -37,11 +93,47 @@ Son consideradas depredadores tope del océano.
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Killerwhales_jumping.jpg" width="400">
 
+<br><br>
+
+<button onclick="cambiarColor()">
+Cambiar color de fondo
+</button>
+
+<button onclick="mostrarMensaje()">
+Dato curioso
+</button>
+
+<button onclick="mostrarGif()">
+Ver GIF
+</button>
+
+<p id="dato"></p>
+
+<div id="gif"></div>
+
 </section>
 
 <footer>
 <p>Proyecto HTML5 - Orcas</p>
 </footer>
+
+<script>
+
+function cambiarColor(){
+    document.body.style.backgroundColor = "#dfe7fd";
+}
+
+function mostrarMensaje(){
+    document.getElementById("dato").innerHTML =
+    "Las orcas pueden comunicarse mediante sonidos y viven en grupos familiares muy unidos.";
+}
+
+function mostrarGif(){
+    document.getElementById("gif").innerHTML =
+    '<img src="https://media.tenor.com/Bb7ddBamM6IAAAAM/orca-whale.gif" width="400">';
+}
+
+</script>
 
 </body>
 </html>
