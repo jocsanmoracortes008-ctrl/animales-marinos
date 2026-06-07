@@ -2,6 +2,8 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Ballenas Grises</title>
 
 <style>
@@ -41,6 +43,10 @@ nav a{
     border-radius: 10px;
 }
 
+nav a:hover{
+    background-color: #023e8a;
+}
+
 section{
     padding: 20px;
 }
@@ -61,13 +67,17 @@ input{
     padding: 8px;
 }
 
+img{
+    border-radius: 10px;
+}
+
 </style>
 
 </head>
 <body>
 
 <header>
-<h1>Ballenas Grises</h1>
+<h1>🐋 Ballenas Grises</h1>
 </header>
 
 <nav>
@@ -115,7 +125,7 @@ Cambiar color de fondo
 
 <p>¿Cuántas ballenas deseas calcular?</p>
 
-<input type="number" id="cantidad">
+<input type="number" id="cantidad" placeholder="Escribe una cantidad">
 
 <button onclick="calcularPeso()">
 Calcular
@@ -137,9 +147,23 @@ function cambiarColor(){
 
 function calcularPeso(){
 
-    let cantidad =
-    document.getElementById("cantidad").value;
+    let cantidad = document.getElementById("cantidad").value;
+
+    if(cantidad === ""){
+        document.getElementById("resultado").innerHTML =
+        "Por favor escribe una cantidad.";
+        return;
+    }
 
     let peso = cantidad * 30;
 
-    docume
+    document.getElementById("resultado").innerHTML =
+    "El peso aproximado de " + cantidad +
+    " ballena(s) es de " + peso +
+    " toneladas.";
+}
+
+</script>
+
+</body>
+</html>
