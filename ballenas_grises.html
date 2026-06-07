@@ -61,6 +61,7 @@ footer{
 button{
     padding: 10px;
     margin: 10px;
+    cursor: pointer;
 }
 
 input{
@@ -111,9 +112,9 @@ en el fondo del océano.
 
 <br><br>
 
-<h3>Ballena Gris en Movimiento</h3>
+<h3>Ballena en Movimiento</h3>
 
-<img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzRraTAxcjFkdDU3NXhhNWYya3NzcWw4cXFuenU4d2Ewc2o3cWFnMSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/s9hzFPLDT2YSY/200.webp" width="400">
+<img src="https://media.giphy.com/media/l0MYB8Ory7Hqefo9a/giphy.gif" width="400">
 
 <br><br>
 
@@ -141,21 +142,21 @@ Calcular
 
 <script>
 
-function cambiarColor(){
+function cambiarColor() {
     document.body.style.backgroundColor = "#d8f3dc";
 }
 
-function calcularPeso(){
+function calcularPeso() {
 
-    let cantidad = document.getElementById("cantidad").value;
+    var cantidad = document.getElementById("cantidad").value;
 
-    if(cantidad === ""){
+    if (cantidad == "") {
         document.getElementById("resultado").innerHTML =
-        "Por favor escribe una cantidad.";
+        "Escribe una cantidad.";
         return;
     }
 
-    let peso = cantidad * 30;
+    var peso = Number(cantidad) * 30;
 
     document.getElementById("resultado").innerHTML =
     "El peso aproximado de " + cantidad +
