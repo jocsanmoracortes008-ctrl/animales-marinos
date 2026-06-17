@@ -2,58 +2,122 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Formulario</title>
+<title>Calculadora de Animales Marinos</title>
 
 <style>
 
 body{
     font-family: Arial, sans-serif;
-    text-align:center;
-    background-color:#e6f7ff;
+    text-align: center;
+    background-color: #e6f7ff;
+    margin: 0;
 }
 
-input{
-    padding:10px;
-    margin:10px;
-    width:250px;
+header{
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+}
+
+section{
+    padding: 20px;
+}
+
+select,input{
+    padding: 10px;
+    margin: 10px;
 }
 
 button{
-    padding:10px;
+    padding: 10px 15px;
+    margin: 10px;
+    background-color: #0096c7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #023e8a;
+}
+
+footer{
+    background-color: #0077b6;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
 }
 
 </style>
 
+</head>
+<body>
+
+<header>
+<h1>🧮 Calculadora de Peso</h1>
+</header>
+
+<section>
+
+<h2>Calcula el peso aproximado</h2>
+
+<p>Selecciona un animal marino:</p>
+
+<select id="animal">
+
+<option value="30">🐋 Ballena Gris (30 toneladas)</option>
+
+<option value="0.2">🐬 Delfín (0.2 toneladas)</option>
+
+<option value="6">⚫ Orca (6 toneladas)</option>
+
+</select>
+
+<br>
+
+<p>¿Cuántos animales deseas calcular?</p>
+
+<input type="number" id="cantidad" min="1">
+
+<br>
+
+<button onclick="calcularPeso()">
+Calcular Peso
+</button>
+
+<h2 id="resultado"></h2>
+
+<br>
+
+<button onclick="window.location.href='index.html'">
+🏠 Volver al Inicio
+</button>
+
+</section>
+
+<footer>
+<p>Proyecto HTML5 - Animales Marinos</p>
+</footer>
+
 <script>
 
-function enviarFormulario(){
+function calcularPeso(){
 
-    document.body.innerHTML = `
-    <h1>✅ Muchas Gracias</h1>
-    <h2>Tu formulario fue enviado correctamente.</h2>
-    <p>Gracias por visitar nuestra página de animales marinos.</p>
-    `;
+    let peso =
+    Number(document.getElementById("animal").value);
+
+    let cantidad =
+    Number(document.getElementById("cantidad").value);
+
+    let total = peso * cantidad;
+
+    document.getElementById("resultado").innerHTML =
+    "Peso aproximado total: " + total + " toneladas.";
 
 }
 
 </script>
-
-</head>
-<body>
-
-<h1>📝 Formulario</h1>
-
-<p>Nombre:</p>
-<input type="text" id="nombre">
-
-<p>¿Cuál es tu animal marino favorito?</p>
-<input type="text" id="animal">
-
-<br><br>
-
-<button onclick="enviarFormulario()">
-Enviar Formulario
-</button>
 
 </body>
 </html>
