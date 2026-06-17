@@ -8,18 +8,38 @@
 
 body{
     font-family: Arial, sans-serif;
-    text-align:center;
-    background-color:#e6f7ff;
+    text-align: center;
+    background-color: #e6f7ff;
+    margin: 0;
+}
+
+header{
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+}
+
+section{
+    padding: 20px;
 }
 
 input{
-    padding:10px;
-    margin:10px;
-    width:250px;
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
 }
 
 button{
-    padding:10px;
+    padding: 10px 15px;
+    background-color: #0096c7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #023e8a;
 }
 
 </style>
@@ -28,10 +48,31 @@ button{
 
 function enviarFormulario(){
 
+    let nombre =
+    document.getElementById("nombre").value;
+
     document.body.innerHTML = `
-    <h1>✅ Muchas Gracias</h1>
-    <h2>Tu formulario fue enviado correctamente.</h2>
-    <p>Gracias por visitar nuestra página de animales marinos.</p>
+
+    <header>
+        <h1>✅ Muchas Gracias</h1>
+    </header>
+
+    <section>
+
+    <h2>Gracias por responder el formulario, ${nombre}</h2>
+
+    <p>
+    Tu información fue enviada correctamente.
+    </p>
+
+    <br>
+
+    <button onclick="window.location.href='index.html'">
+    🏠 Volver al Inicio
+    </button>
+
+    </section>
+
     `;
 
 }
@@ -41,19 +82,33 @@ function enviarFormulario(){
 </head>
 <body>
 
+<header>
 <h1>📝 Formulario</h1>
+</header>
+
+<section>
+
+<h2>Cuéntanos un poco sobre ti</h2>
 
 <p>Nombre:</p>
 <input type="text" id="nombre">
 
+<p>Edad:</p>
+<input type="number" id="edad">
+
 <p>¿Cuál es tu animal marino favorito?</p>
 <input type="text" id="animal">
+
+<p>¿Te gustó la página?</p>
+<input type="text" id="opinion">
 
 <br><br>
 
 <button onclick="enviarFormulario()">
 Enviar Formulario
 </button>
+
+</section>
 
 </body>
 </html>
