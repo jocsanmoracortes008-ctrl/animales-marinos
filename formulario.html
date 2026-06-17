@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Formulario</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    text-align:center;
+    background-color:#e6f7ff;
+}
+
+input{
+    padding:10px;
+    margin:10px;
+    width:250px;
+}
+
+button{
+    padding:10px;
+}
+
+</style>
+
+<script>
+
+function enviarFormulario(){
+
+    document.body.innerHTML = `
+    <h1>✅ Muchas Gracias</h1>
+    <h2>Tu formulario fue enviado correctamente.</h2>
+    <p>Gracias por visitar nuestra página de animales marinos.</p>
+    `;
+
+}
+
+</script>
+
+</head>
+<body>
+
+<h1>📝 Formulario</h1>
+
+<p>Nombre:</p>
+<input type="text" id="nombre">
+
+<p>¿Cuál es tu animal marino favorito?</p>
+<input type="text" id="animal">
+
+<br><br>
+
+<button onclick="enviarFormulario()">
+Enviar Formulario
+</button>
+
+</body>
+</html>
